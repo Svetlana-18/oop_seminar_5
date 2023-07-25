@@ -8,11 +8,9 @@ import Model.Student;
 
 public class View implements iGetView {
 
-    public void printAllStudents(List<Student> students)
-    {
+    public void printAllStudents(List<Student> students) {
         System.out.println("------список студентов--------");
-        for(Student stud: students)
-        {
+        for (Student stud : students) {
             System.out.println(stud);
         }
         System.out.println("===============================");
@@ -26,9 +24,9 @@ public class View implements iGetView {
 
     @Override
     public String prompt(String msg) {
-       Scanner in = new Scanner(System.in);
-       System.out.print(msg);
-       return in.nextLine();
+        Scanner in = new Scanner(System.in);
+        System.out.print(msg);
+        return in.nextLine();
     }
 
     @Override
@@ -54,5 +52,5 @@ public class View implements iGetView {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getStudentIdToUpdate'");
     }
-    
+
 }

@@ -11,8 +11,7 @@ public class ModelList implements iGetModel {
         this.students = students;
     }
 
-    public List<Student> getAllStudents()
-    {
+    public List<Student> getAllStudents() {
         return students;
     }
 }

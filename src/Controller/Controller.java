@@ -73,6 +73,8 @@ public class Controller {
      /**
      * 
      */
+
+
     public void run()
     {
         Command com = Command.NONE;
@@ -90,6 +92,12 @@ public class Controller {
                 case LIST:
                     view.printAllStudents(model.getAllStudents());
                     break;
+                // case DELETE:
+                // String comm = view.prompt("Enter id student:");
+                //   c = Command.valueOf(command.toUpperCase());
+                //     view.remove(c);
+                //     break;
+
             }
 
         }

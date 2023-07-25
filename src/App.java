@@ -12,43 +12,43 @@ import View.ViewEng;
 
 public class App {
     public static void main(String[] args) throws Exception {
-       // System.out.println("Hello, World!");
+        // System.out.println("Hello, World!");
 
-       List<Student> students = new ArrayList<Student>();
-       Student s1 = new Student("Sergey",  21, 101);
-       Student s2 = new Student("Andrey",  22, 111);
-       Student s3 = new Student("Ivan", 22, 121);
-       Student s4 = new Student("Igor", 23, 301);
-       Student s5 = new Student("Dariya",  25, 171);
-       Student s6 = new Student("Elena",  23, 104);
-       students.add(s1);
-       students.add(s2);
-       students.add(s3);
-       students.add(s4);
-       students.add(s5);
-       students.add(s6);
+        List<Student> students = new ArrayList<Student>();
+        Student s1 = new Student("Sergey", 21, 101);
+        Student s2 = new Student("Andrey", 22, 111);
+        Student s3 = new Student("Ivan", 22, 121);
+        Student s4 = new Student("Igor", 23, 301);
+        Student s5 = new Student("Dariya", 25, 171);
+        Student s6 = new Student("Elena", 23, 104);
+        students.add(s1);
+        students.add(s2);
+        students.add(s3);
+        students.add(s4);
+        students.add(s5);
+        students.add(s6);
 
-       ModelFile fModel = new ModelFile("StudentDB.txt");
+        ModelFile fModel = new ModelFile("StudentDB.txt");
 
-    //   fModel.saveAllStudentToFile(students);
+        // fModel.saveAllStudentToFile(students);
 
-    //    iGetModel modelFile = fModel;
-    //    iGetModel model = new ModelList(students);
-    //    iGetView view = new View();
+        // iGetModel modelFile = fModel;
+        // iGetModel model = new ModelList(students);
+        // iGetView view = new View();
 
-    //    Controller control = new Controller(modelFile, view);
-        //    control.run();
+        // Controller control = new Controller(modelFile, view);
+        // control.run();
 
-// подключаю ViewEng к интерфейсу iGetView. Класс ViewEng подключить к контроллеру.
-       iGetModel modelFile = fModel;
-       iGetModel model = new ModelList(students);
-       iGetView viewEng = new ViewEng();
+        // подключаю ViewEng к интерфейсу iGetView. Класс ViewEng подключить к
+        // контроллеру.
+        iGetModel modelFile = fModel;
+        iGetModel model = new ModelList(students);
+        iGetView viewEng = new ViewEng();
 
-       Controller control = new Controller(modelFile, viewEng);
+        Controller control = new Controller(modelFile, viewEng);
 
-
-       //control.update();
-       control.run();
+        // control.update();
+        control.run();
 
     }
 }
