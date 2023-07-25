@@ -6,6 +6,7 @@ import java.util.List;
 import Model.ModelList;
 import Model.Student;
 import View.View;
+import View.ViewEng;
 
 public class Controller {
 
@@ -47,19 +48,44 @@ public class Controller {
         //view.printAllStudents(model.getAllStudents());
     }
 
+    // public void run()
+    // {
+    //     Command com = Command.NONE;
+    //     boolean getNewIteration = true;
+    //     while(getNewIteration)
+    //     {
+    //         String command = view.prompt("Введите команду:");
+    //         com = Command.valueOf(command.toUpperCase());
+    //         switch(com)
+    //         {
+    //             case EXIT:
+    //                 getNewIteration=false;
+    //                 System.out.println("Выход из программы!");
+    //                 break;
+    //             case LIST:
+    //                 view.printAllStudents(model.getAllStudents());
+    //                 break;
+    //         }
+
+    //     }
+    // }
+
+     /**
+     * 
+     */
     public void run()
     {
         Command com = Command.NONE;
         boolean getNewIteration = true;
         while(getNewIteration)
         {
-            String command = view.prompt("Введите команду:");
+            String command = view.prompt("Enter command:");
             com = Command.valueOf(command.toUpperCase());
             switch(com)
             {
                 case EXIT:
                     getNewIteration=false;
-                    System.out.println("Выход из программы!");
+                    System.out.println("Exiting the program!");
                     break;
                 case LIST:
                     view.printAllStudents(model.getAllStudents());

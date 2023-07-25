@@ -1,3 +1,5 @@
+// Сделать вариант класса ViewEng с текстом на английском языке
+
 package View;
 
 import java.util.List;
