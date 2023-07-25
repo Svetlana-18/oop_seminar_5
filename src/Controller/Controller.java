@@ -19,74 +19,62 @@ public class Controller {
         this.view = view;
     }
 
-    private boolean testData(List<Student> students)
-    {
-        if(students.size()>0)
-        {
+    private boolean testData(List<Student> students) {
+        if (students.size() > 0) {
             return true;
-        }
-        else
-        {
+        } else {
             return false;
         }
     }
 
-    public void update()
-    {
-        //MVP
+    public void update() {
+        // MVP
         students = model.getAllStudents();
-        if(testData(students))
-        {
-           view.printAllStudents(students);
-        }
-        else
-        {
+        if (testData(students)) {
+            view.printAllStudents(students);
+        } else {
             System.out.println("Список студентов пуст!");
         }
 
-        //MVC
-        //view.printAllStudents(model.getAllStudents());
+        // MVC
+        // view.printAllStudents(model.getAllStudents());
     }
 
     // public void run()
     // {
-    //     Command com = Command.NONE;
-    //     boolean getNewIteration = true;
-    //     while(getNewIteration)
-    //     {
-    //         String command = view.prompt("Введите команду:");
-    //         com = Command.valueOf(command.toUpperCase());
-    //         switch(com)
-    //         {
-    //             case EXIT:
-    //                 getNewIteration=false;
-    //                 System.out.println("Выход из программы!");
-    //                 break;
-    //             case LIST:
-    //                 view.printAllStudents(model.getAllStudents());
-    //                 break;
-    //         }
-
-    //     }
+    // Command com = Command.NONE;
+    // boolean getNewIteration = true;
+    // while(getNewIteration)
+    // {
+    // String command = view.prompt("Введите команду:");
+    // com = Command.valueOf(command.toUpperCase());
+    // switch(com)
+    // {
+    // case EXIT:
+    // getNewIteration=false;
+    // System.out.println("Выход из программы!");
+    // break;
+    // case LIST:
+    // view.printAllStudents(model.getAllStudents());
+    // break;
     // }
 
-     /**
-     * 
-     */
+    // }
+    // }
 
+    /**
+    * 
+    */
 
-    public void run()
-    {
+    public void run() {
         Command com = Command.NONE;
         boolean getNewIteration = true;
-        while(getNewIteration)
-        {
+        while (getNewIteration) {
             String command = view.prompt("Enter command:");
             com = Command.valueOf(command.toUpperCase());
-            switch(com)
-            {
+            switch (com) {
                 case EXIT:
-                    getNewIteration=false;
+                    getNewIteration = false;
                     System.out.println("Exiting the program!");
                     break;
                 case LIST:
@@ -94,14 +82,13 @@ public class Controller {
                     break;
                 // case DELETE:
                 // String comm = view.prompt("Enter id student:");
-                //   c = Command.valueOf(command.toUpperCase());
-                //     view.remove(c);
-                //     break;
+                // c = Command.valueOf(command.toUpperCase());
+                // view.remove(c);
+                // break;
 
             }
 
         }
     }
 
-    
 }

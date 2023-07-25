@@ -4,7 +4,7 @@ import java.util.List;
 
 import Controller.iGetModel;
 
-public class HashMap <Long,Student> implements iGetModel {
+public class HashMap<Long, Student> implements iGetModel {
 
     @Override
     public List<Model.Student> getAllStudents() {
@@ -12,5 +12,4 @@ public class HashMap <Long,Student> implements iGetModel {
         return null;
     }
 
-   
 }
